@@ -1,5 +1,6 @@
 <?php
 require_once './controllers/HomeController.php';
+require_once './views/includes/header.php';
 $home = new HomeController();
 $pages = ['home', 'add', 'update', 'delete'];
 if(isset($_GET['page'])){
@@ -13,3 +14,4 @@ if(isset($_GET['page'])){
     $home->index("home");
  }
 ?>
+<?php require_once './views/includes/footer.php';?>
